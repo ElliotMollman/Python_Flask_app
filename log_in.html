@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elliot's Website</title>
+</head>
+
+<style>
+.vertical_div{
+    padding: 5px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    position: absolute;
+</style>
+
+<body>
+    <div style="display: flex; height: 950px; width: 100%; background-color: slategray;">
+        <div style="padding: 30px; display: flex; background-color: white; border-color: white; border-style: solid; margin: auto; height: 500px; width: 550px; position: relative;">
+            <div class="vertical_div" style="top: 0px; padding: 25px;">
+                <p style="color: black; font-size: 30px; text-align: left;">Choose Option Below</p>
+                <br>
+                <br>
+                <br>
+                <p style="color: black; font-size: 25px; text-align: left;">Proceed to Log In:</p>
+                <form action="{{url_for('login')}}" method="post">
+                    <label style="font-size: 20px;" for="uname">First name:</label><br>
+                    <input type="text" id="uname" name="username" value=""><br>
+
+                    <label style="font-size: 20px;" for="pass">Last name:</label><br>
+                    <input type="text" id="pass" name="password" value=""><br><br>
+
+                    <input type="submit" value="Submit">
+                    <br>
+                    <br>
+                </form>
+            </div>
+            <div class="vertical_div" style="bottom: 0px; padding: 25px;">
+                <br>
+                <br>
+                <p style="color: black; font-size: 25px; text-align: left;">Continue as guest:</p>
+                <form action="welcome.html">
+                    <input type="checkbox" id="guest_log_in" name="vehicle1" value="guest">
+                    <label for="guest_log_in"> Yes</label>
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit">
+                    <br>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
